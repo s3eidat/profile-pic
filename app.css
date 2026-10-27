@@ -1,0 +1,15 @@
+.pp-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 14px; align-items: start; }
+.pp-left { position: sticky; top: 76px; }
+.pp-left #drop { min-height: 360px; }
+.pp-sample { justify-self: center; }
+.pp-stage { display: grid; place-items: center; padding: 22px; border-radius: 14px; border: 1px solid var(--line); }
+.pp-stage canvas { width: 100%; max-width: 440px; height: auto; aspect-ratio: 1; cursor: grab; touch-action: none; border-radius: 4px; }
+.pp-stage canvas.dragging { cursor: grabbing; }
+.pp-stage canvas:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.pp-hint { margin: -4px 0 0; }
+.pp-p { margin: 0; }
+.pp-chk { align-self: end; padding-bottom: 10px; }
+.pp-swatches { display: flex; flex-wrap: wrap; gap: 8px; }
+.pp-sw { width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--line-strong); transition: transform 120ms; }
+.pp-sw:hover { transform: scale(1.08); }
+@media (max-width: 860px) { .pp-grid { grid-template-columns: minmax(0, 1fr); } .pp-left { position: static; } }
